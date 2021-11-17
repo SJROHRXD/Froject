@@ -1,0 +1,27 @@
+{
+  "name": "froject",
+  "version": "1.0.0",
+  "description": "Final Project - Elliott, Ray, Sarah, Zakk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SJROHRXD/Froject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SJROHRXD/Froject/issues"
+  },
+  "homepage": "https://github.com/SJROHRXD/Froject#readme",
+  "dependencies": {
+    "config": "^3.3.6",
+    "express": "^4.17.1",
+    "express-validator": "^6.13.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.13"
+  }
+}
