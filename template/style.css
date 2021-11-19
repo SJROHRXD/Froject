@@ -1,10 +1,11 @@
 :root {
     /* --color1: #05f2af; */
-    --primary: #02c39a;
-    --secondary: #D955B5;
-    --light: #eee;
+    --primary: #01ABAA;
+    --secondary: #FEA680;
+    --alert: #FEDC3D;
+    --light: #efefee;
     --dark: #333;
-    --dark2: #0D0D0D;
+    --dark2: #000;
 }
 
 body {
@@ -26,7 +27,7 @@ body {
     font-size: 1.2em;
     font-weight: bolder;
     background-color: var(--dark);
-    color: var(--secondary);
+    color: var(--primary);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -52,8 +53,8 @@ body {
   
   /* Add a red background color to navbar links on hover */
   .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: var(--secondary);
-    color: var(--dark);
+    background-color: var(--primary);
+    color: var(--secondary);
   }
   
   /* Dropdown content (hidden by default) */
@@ -78,8 +79,8 @@ body {
   
   /* Add a grey background color to dropdown links on hover */
   .dropdown-content a:hover {
-    background-color: var(--secondary);
-    color: var(--dark);
+    background-color: var(--primary);
+    color: var(--secondary);
   }
   
   /* Show the dropdown menu on hover */
@@ -94,11 +95,37 @@ body {
 
   .card-1 {
       background-color: var(--secondary);
-      height: 100vh;
+      height: 75vh;
       width: 75%;
+      margin-left: 3rem;
+      margin-top: 2.3rem;
+      border-radius: 15px 0px 0px 15px;
+      padding: 1.3rem;
   }
 
   .card-2 {
       background-color: var(--primary);
       width: 25%;
+      height: 75vh;
+      margin-right: 3rem;
+      margin-top: 2.3rem;
+      border-radius: 0px 15px 15px 0px;
+      padding: 1.3rem;
   }
+
+  @media only screen and (max-width: 640px) {
+    .container {
+      flex-flow: column-reverse wrap-reverse;
+    }
+    .card-1 {
+      margin: 0;
+      width: 100vw;
+      border-radius: 0;
+    }
+    .card-2 {
+      display: none;
+    }
+  }
+
+  /* top-left top-right bottom-right bottom-left
+  1 2 3 3 */
