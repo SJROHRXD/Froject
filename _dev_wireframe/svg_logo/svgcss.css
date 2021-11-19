@@ -1,14 +1,22 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: 0;
-}
-
-#FRONTZAP {
-
+/* all this nonsense to center the svg */
+svg {
+    margin-top: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 keyframes FRONTZAP {
+    from{
+        transform:
+        transform-box:
+    }
+}
+
+keyframes BACKZAP {
     from{
         transform:
         transform-box:
