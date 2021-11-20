@@ -5,56 +5,45 @@
 
 body {
     background-image: 
-        /* linear-gradient(#fd773d28, #f579444f), */
         url("handshake.jpeg");
     background-position-x: 50%;
     background-position-y: 30%;
-    /* background-position: center; */
-    /* background-attachment: scroll; */
     background-size: 100%;
     background-repeat: no-repeat;
     background-blend-mode: color;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Float four columns side by side */
 .column {
     align-items: center;
     align-content: center;
     align-self: center;
-    float: left;
     justify-content: center;
-    width: 25%;
+    width: 30%;
     padding: 4px 4px;
-    /* max-width: 25%; */
 
 }
 
-/* Remove extra left and right margins, due to padding */
 .row {
     justify-content: center;
     margin: 0 -5px;
 }
 
-/* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
 
-/* Responsive columns */
 @media screen and (max-width: 600px) {
 .column {
         width: 100%;
         display: block;
-        /* margin-bottom: 20px; */
     }
 }
 
 /* STYLE CARDS */
 .card {
-    /* min-width: 20%; */
     border-radius: 4%;
     box-shadow: 0 5px 6px 0 hsla(0, 0%, 0%, 0.3);
     padding: 30px;
@@ -63,7 +52,6 @@ body {
 }
 
 .card h4 {
-    /* text-size-adjust: auto; */
     font-size: large;
 }
 .bennies1 {
@@ -92,6 +80,7 @@ body {
     background-color: #f88c5e;
 }
 
+/* HOVER EFFECTS OVER THE CARD CHUNKS */
 .bennies1:hover {
     transform: ;
 }
