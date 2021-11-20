@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+    float: none;
+}
+
+body {
+    background-image: 
+        url("handshake.jpeg");
+    background-position-x: 50%;
+    background-position-y: 30%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: color;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.column {
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    justify-content: center;
+    width: 30%;
+    padding: 4px 4px;
+
+}
+
+.row {
+    justify-content: center;
+    margin: 0 -5px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+.column {
+        width: 100%;
+        display: block;
+    }
+}
+
+/* STYLE CARDS */
+.card {
+    border-radius: 4%;
+    box-shadow: 0 5px 6px 0 hsla(0, 0%, 0%, 0.3);
+    padding: 30px;
+    text-align: center;
+    background-color: #fea6809c;
+}
+
+.card h4 {
+    font-size: large;
+}
+.bennies1 {
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 4%;
+    font-family: 'Segoe UI';
+    font-weight: 600;
+    background-color: #f8733a;
+
+}
+.bennies2 {
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 4%;
+    font-family: 'Segoe UI';
+    font-weight: 600;
+    background-color: #f8824f;
+}
+.bennies3 {
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 4%;
+    font-family: 'Segoe UI';
+    font-weight: 600;
+    background-color: #f88c5e;
+}
+
+/* HOVER EFFECTS OVER THE CARD CHUNKS */
+.bennies1:hover {
+    transform: ;
+}
