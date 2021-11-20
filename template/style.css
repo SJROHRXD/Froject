@@ -1,5 +1,4 @@
 :root {
-  /* --color1: #05f2af; */
   --primary: #01abaa;
   --secondary: #fea680;
   --alert: #fedc3d;
@@ -14,7 +13,6 @@ body {
   background-color: var(--light);
 }
 :root {
-  /* --color1: #05f2af; */
   --primary: #01abaa;
   --secondary: #fea680;
   --alert: #fedc3d;
