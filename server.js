@@ -15,6 +15,10 @@ app.use(express.json({ extended: false }))
 
 // routes
 app.get("/", (req, res) => res.send("API Running"));
+app.get("/schedule", (req, res) => res.send("API Running"));
+app.get("/comment", (req, res) => res.send("API Running"));
+
+
 // TODO: add more routes as we need them here
 
 const PORT = process.env.PORT || 5000;
