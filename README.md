@@ -1,21 +1,21 @@
-# Froject
+# Zapplicant ⚡⚡ #
 
 This is a project.
 
-## Repository 🌼
+## Repository 💼 ##
 
 []()
 
-## Video Demo 🌷
+## Video Demo 💼 ##
 
 []()
 
-## Screenshots 🌻
+## Screenshots 💼 ##
 
 <img src="https://raw">
 
 
-## Table of Contents
+## Table of Contents ##
 
 - [Repository](#Repository-)
 - [Video Demo](#Video-Demo-)
@@ -36,7 +36,7 @@ This is a project.
 //
 
 
-### Overview
+### Overview 🤞
 
         Welcome to your third and final group project!
         
@@ -56,7 +56,7 @@ This is a project.
 
 ## Tech 🖥
 
-React, Redux
+                React, Redux
 
 
 ## Testing 🧷
@@ -77,9 +77,9 @@ Copyright &copy; 2021
 
 ## Contact 🗨
 
-[Elliott's GitHub](https://github.com/SJROHRXD)
-[Ray's GitHub](https://github.com/SJROHRXD)
-[Zakk's GitHub](https://github.com/SJROHRXD)
+[Elliott's GitHub](https://github.com/spencee1315)
+[Ray's GitHub](https://github.com/rashir01)
+[Zakk's GitHub](https://github.com/ZakkFast)
 [Sarah's GitHub](https://github.com/SJROHRXD)
 
-This README was generated with 🌼🌿🌷 and 🤍 by Sarah Jeanne Rohr.
+This README was generated with ⚡💼 and 🤍 by Sarah, Zakk, Elliott and Ray.
