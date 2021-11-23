@@ -17,3 +17,13 @@ label {
     display: block;
     margin: auto;
 }
+
+#Vector {
+    fill: #e6fdfd36;
+    transition: fill .5s ease-in-out;
+}
+
+#Vector:hover {
+    fill: #01ABAA;
+    transition: fill .5s ease-in-out;
+}
