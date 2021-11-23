@@ -1,25 +1,26 @@
-* {
-    box-sizing: border-box;
-    /* float: none; */
+
+
+label {
+    font-size: larger;
+    font-weight: 600;
 }
 
-body {
-    background-image:
-        url("handshake.jpeg");
-    background-position-x: 50%;
-    background-position-y: 30%;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-blend-mode: color;
-    font-family: Arial, Helvetica, sans-serif;
+#slogin {
+    background-color: #e6fdfd36;
 }
 
-.column {
-    align-items: center;
-    align-content: center;
-    align-self: center;
-    float: left;
-    justify-content: center;
-    width: 25%;
-    padding: 4px 4px;
+#svgLogo {
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+#Vector {
+    fill: #e6fdfd36;
+    transition: fill .5s ease-in-out;
+}
+
+#Vector:hover {
+    fill: #01ABAA;
+    transition: fill .5s ease-in-out;
 }
