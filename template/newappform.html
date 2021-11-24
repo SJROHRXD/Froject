@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./newappform.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Zapplicant: New Applicant Form</title>
+</head>
+<body> 
+    <section>
+        <form>
+            <div>
+                <h1>New Applicant Information</h1>
+                <!-- APPLICANT NAME -->
+                <div>
+                    <!-- Fields cannot be empty -->
+                    <label class="label">New Applicant First Name</label>
+                    <input class="input" type="text" placeholder="First Name">
+                    <label class="label">New Applicant Last Name</label>
+                    <input class="input" type="text" placeholder="Last Name">
+                </div>
+                <!-- EMAIL ADDRESS -->
+                <div>
+                    <!-- Validation, Field cannot be empty -->
+                    <label class="label">Applicant Email Address</label>
+                    <input class="input" type="text" placeholder="emailadress@email.com">
+                </div>
+                <!-- POSITION -->
+                <div>
+                    <!-- Limit Characters -->
+                    <label class="label">Position Applied</label>
+                    <input class="input" type="text" placeholder="Name the position you're applying for here.">
+                </div>
+                <!-- SKILLS -->
+                <div>
+                    <!-- Limit Characters, Auto Separate by comma? -->
+                    <label class="label">Skills</label>
+                    <input class="input" type="text" placeholder="List skills here.">
+                </div>
+                <div>
+                <!-- RESUME LINK -->
+                <br>
+                <div class="file">
+                    <label class="file-label">
+                    <input class="file-input" type="file" name="resume">
+                        <span class="file-cta">
+                            <!-- Needs Font Awesome -->
+                            <span class="file-icon">
+                                <i class="fas fa-upload"></i>
+                            </span>
+                            <span class="file-label">
+                                Upload Resume!
+                            </span>
+                        </span>
+                    </label>
+                </div>
+                <br>
+                <!-- SELECT INTERVIEW, DATE -->
+                <div>
+                    <label class="checkbox">
+                        <h2>Do you have a scheduled interview?</h2><br>
+                        <input type="checkbox">
+                        <input type="datetime-local">
+                    </label>
+                </div>
+                <br>
+                <!-- CLEAR FORM -->
+                <div>
+                    <button class="button">Clear Form</button>
+                </div>
+            </div>
+        </form>
+    </section>
+</body>
+</html>
