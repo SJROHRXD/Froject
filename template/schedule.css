@@ -11,3 +11,7 @@ body {
 .border-bottom-1 {
     border-bottom: 1px solid hsl(0, 0%, 71%);
 }
+
+.skills-list {
+    column-count: 2;
+}
