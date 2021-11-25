@@ -9,13 +9,13 @@ const PostSchema = new Schema({
     trim: true, 
     unique: true
   },
-  //todo the applicants Should be an array of applicants
-  applicants: [
-    {
-      type: Schema.Types.ObjectId, 
-      ref: 'Applicant'
-    }
-  ]
+  //Enable this if we decide to add functionality to search by posts
+  // applicants: [
+  //   {
+  //     type: Schema.Types.ObjectId, 
+  //     ref: 'Applicant'
+  //   }
+  // ]
 });
 
 const Post = mongoose.model("Post", PostSchema);
