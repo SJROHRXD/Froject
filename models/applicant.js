@@ -11,7 +11,9 @@ const ApplicantSchema = new Schema({
   // schedule should be a schedule model object not a string
   schedule: String,
   // since we are only considering an applicant for one job, we can have the feedback added here
-  feedback: String
+  feedback: String,
+  // TODO: add email validation 
+  email: String
 });
 
 const Applicant = mongoose.model("Applicant", ApplicantSchema);
