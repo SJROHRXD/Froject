@@ -12,4 +12,6 @@ const typeDefs = gql`
   type Query {
     applicants: [Applicant]
   }
-`
+`;
+
+module.exports = typeDefs;
