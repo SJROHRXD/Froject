@@ -1,21 +1,20 @@
-# Zapplicant ⚡⚡ #
+# Zapplicant ⚡⚡
 
 This is a project.
 
-## Repository 💼 ##
+## Repository 💼
 
 []()
 
-## Video Demo 💼 ##
+## Video Demo 💼
 
 []()
 
-## Screenshots 💼 ##
+## Screenshots 💼
 
 <img src="https://raw">
 
-
-## Table of Contents ##
+## Table of Contents
 
 - [Repository](#Repository-)
 - [Video Demo](#Video-Demo-)
@@ -29,26 +28,29 @@ This is a project.
 - [Licensing](#Licensing-)
 - [Contact](#Contact-)
 
-
-
 ## Description 📌
 
 //
 
-
 ### Overview 🤞
 
         Welcome to your third and final group project!
-        
-        This project serves as your best opportunity to showcase all the skills you’ve learned throughout this course and collaborate with the community of developers you’ve cultivated over the past six months.
-        
-        You’ll work with your group to build a performant and scalable MERN stack single-page application that fulfills a real-world need, with a focus on data and user demand.
 
+        This project serves as your best opportunity to showcase all the skills you’ve learned throughout this course and collaborate with the community of developers you’ve cultivated over the past six months.
+
+        You’ll work with your group to build a performant and scalable MERN stack single-page application that fulfills a real-world need, with a focus on data and user demand.
 
 ## Installation 🛠
 
 //
 
+## Seeding the Database
+
+In order to have some data in the db you will need to run the follwoing command after installation. The command should be run from the root directory. It expects to have access to a local mongoose db.
+
+```
+npm run seed
+```
 
 ## Usage 💻
 
@@ -58,7 +60,6 @@ This is a project.
 
                 React, Redux
 
-
 ## Testing 🧷
 
 //
@@ -67,13 +68,11 @@ This is a project.
 
 //
 
-
 ## Licensing 🧾
 
 [![license](https://img.shields.io/github/license/)]
 
 Copyright &copy; 2021
-
 
 ## Contact 🗨
 
