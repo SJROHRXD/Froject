@@ -1,4 +1,4 @@
-const { Applicant, Employee, Post } = require('../models');
+const { Applicant, Employee, Post, Schedule } = require('../models');
 
 const resolvers = {
   Query: {
@@ -10,6 +10,9 @@ const resolvers = {
     }, 
     posts: async () => {
       return await Post.find({});
+    }, 
+    schedules: async () => {
+      return await Schedule.find({});
     }
   }
 }; 

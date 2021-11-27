@@ -20,10 +20,16 @@ const typeDefs = gql`
     name: String
   }
 
+  type Schedule {
+    _id: ID 
+    date: String
+  }
+
   type Query {
     applicants: [Applicant]
     employees: [Employee]
     posts: [Post]
+    schedules: [Schedule]
   }
 `;
 
