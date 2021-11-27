@@ -6,7 +6,6 @@ const resolvers = {
       return await Applicant.find({}).populate('posting').populate('schedule');
     },
     applicant: async (parent, args) => {
-      console.log(args.email);
       return await Applicant.findOne({email: args.email});
     },
     employees: async () => {
