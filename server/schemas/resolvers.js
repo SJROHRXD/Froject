@@ -3,7 +3,7 @@ const { Applicant, Employee, Post, Schedule } = require('../models');
 const resolvers = {
   Query: {
     applicants: async () => {
-      return await Applicant.find({}).populate('posting');
+      return await Applicant.find({}).populate('posting').populate('schedule');
     }, 
     employees: async () => {
       return await Employee.find({});

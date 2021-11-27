@@ -8,6 +8,7 @@ const typeDefs = gql`
     feedback: String
     email: String
     posting: Post
+    schedule: Schedule
   }
 
   type Employee {
