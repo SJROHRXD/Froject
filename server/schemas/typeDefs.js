@@ -32,6 +32,7 @@ const typeDefs = gql`
     employees: [Employee]
     posts: [Post]
     schedules: [Schedule]
+    applicant(email: String!): Applicant
   }
 `;
 
