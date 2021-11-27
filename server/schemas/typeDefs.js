@@ -9,8 +9,15 @@ const typeDefs = gql`
     email: String
   }
 
+  type Employee {
+    _id: ID
+    name: String
+    title: String
+  }
+
   type Query {
     applicants: [Applicant]
+    employees: [Employee]
   }
 `;
 
