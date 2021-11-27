@@ -7,10 +7,6 @@ const ScheduleSchema = new Schema({
     type: Schema.Types.ObjectId, 
     ref: 'Post'
   }, 
-  applicant: {
-    type: Schema.Types.ObjectId, 
-    ref: 'Applicant'
-  },
   employees: [
     {
       type: Schema.Types.ObjectId, 

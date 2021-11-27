@@ -15,7 +15,9 @@
     "express": "^4.17.1",
     "express-validator": "^6.13.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.13.12"
+    "mongoose": "^5.11.6",
+    "apollo-server-express": "^2.19.0",
+    "graphql": "^15.5.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"

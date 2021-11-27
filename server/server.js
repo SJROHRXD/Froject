@@ -3,12 +3,23 @@ const express = require("express");
 const path = require('path');
 const db = require('./config/db')
 
+// GraphQL declarations
+const { ApolloServer } = require('apollo-server-express');
+const { typeDefs, resolvers } = require('./schemas');
+const server = new ApolloServer({
+  typeDefs, 
+  resolvers
+});
+
+
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Initialize Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+server.applyMiddleware({ app });
+
 
 // routes
 app.get("/", (req, res) => res.send("API Running"));
@@ -29,4 +40,5 @@ app.get('*', (req, res) => {
 
 db.once('open', () => {
   app.listen(PORT, () => console.log(`API server running on port ${PORT}!`));
+  console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
 });
