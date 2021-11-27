@@ -54,6 +54,24 @@ npm run seed
 
 ## Usage 💻
 
+### GraphQL
+
+To use graphQL locally, run the start the server by running
+
+```
+npm i
+npm start
+```
+
+The output should give you a link to the GraphQL Server. It will will look like
+
+```
+http://localhost:5000/graphql
+```
+
+Clicking the link, will open the GraphQL web page where you can view the schema and run desired queries.
+It is recommended that you seed the DB before you execute this step.
+
 //
 
 ## Tech 🖥
@@ -82,3 +100,7 @@ Copyright &copy; 2021
 [Sarah's GitHub](https://github.com/SJROHRXD)
 
 This README was generated with ⚡💼 and 🤍 by Sarah, Zakk, Elliott and Ray.
+
+```
+
+```
