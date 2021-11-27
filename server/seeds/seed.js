@@ -18,6 +18,12 @@ db.once('open', async () => {
   const posts = await Post.insertMany(postData);
   const schedules = await Schedule.insertMany(scheduleData);
 
+  for (currentApplicant of applicants) {
+    const tempPost = posts[Math.floor(Math.random() * posts.length)];
+    currentApplicant.posting = tempPost._id;
+    await currentApplicant.save();
+  }
+
   console.log('all done!');
   process.exit(0);
 });
