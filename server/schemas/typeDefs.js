@@ -15,9 +15,15 @@ const typeDefs = gql`
     title: String
   }
 
+  type Post {
+    _id: ID
+    name: String
+  }
+
   type Query {
     applicants: [Applicant]
     employees: [Employee]
+    posts: [Post]
   }
 `;
 
