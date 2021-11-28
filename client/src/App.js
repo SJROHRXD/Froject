@@ -6,7 +6,7 @@ import { Navbar } from './Components/layout/Navbar';
 import { Footer } from './Components/layout/Footer';
 // import { Router } from 'express';
 import { SignIn } from './Components/Landing/SignIn.js';
-import { ApplicantCard } from './Components/ApplicantView.js/ApplicantCard';
+import { Applicant } from './Components/ApplicantView.js/Applicant';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route exact path='/' element={SignIn()} />
-          <Route exact path='/applicant' element={ApplicantCard()} />
+          <Route exact path='/applicant' element={Applicant()} />
         </Routes>
         <Footer />
       </Fragment>
