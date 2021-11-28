@@ -2,15 +2,15 @@ import React from 'react';
 
 export const Navbar = () => {
   return (
-    <nav class='navbar is-primary'>
-      <div class='navbar-brand'>
-        <a href='#' class='navbar-item is-size-3'>
+    <nav className='navbar is-primary'>
+      <div className='navbar-brand'>
+        <a href='/' className='navbar-item is-size-3'>
           Zapplicant
         </a>
       </div>
-      <div class='navbar-end'>
-        <a href='#' class='navbar-item'>
-          Settings<i class='ml-2 fa fa-cog'></i>
+      <div className='navbar-end'>
+        <a href='www.google.com' className='navbar-item'>
+          Settings<i className='ml-2 fa fa-cog'></i>
         </a>
       </div>
     </nav>

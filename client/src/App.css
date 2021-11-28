@@ -15,3 +15,30 @@ body {
 .skills-list {
     column-count: 2;
 }
+
+
+/* Sarah's LogIn CSS */
+label {
+    font-size: larger;
+    font-weight: 600;
+}
+
+#slogin {
+    background-color: #e6fdfd36;
+}
+
+#svgLogo {
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+#Vector {
+    fill: #e6fdfd36;
+    transition: fill .5s ease-in-out;
+}
+
+#Vector:hover {
+    fill: #01ABAA;
+    transition: fill .5s ease-in-out;
+}
