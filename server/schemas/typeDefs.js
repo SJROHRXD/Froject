@@ -35,6 +35,11 @@ const typeDefs = gql`
     applicantByEmail(email: String!): Applicant
     applicantByName(name: String!): Applicant
   }
+
+  type Mutation {
+    #set the required fields for new applicant
+    addApplicant(name: String!, email: String!, status: String!): Applicant
+  }
 `;
 
 module.exports = typeDefs;

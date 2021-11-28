@@ -21,6 +21,11 @@ const resolvers = {
     schedules: async () => {
       return await Schedule.find({});
     }
+  },
+  Mutation: {
+    addApplicant: async (parent, {name, email, status}) => {
+      return await Applicant.create({name, email, status});
+    }
   }
 }; 
 
