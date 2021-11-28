@@ -28,6 +28,12 @@ const resolvers = {
     }, 
     addSchedule: async (parent, {date}) => {
       return await Schedule.create({date});
+    }, 
+    addEmployee: async (parent, {name, title}) => {
+      return await Employee.create({name, title});
+    }, 
+    addPost: async (parent, {name}) => {
+      return await Post.create({name});
     }
   }
 }; 

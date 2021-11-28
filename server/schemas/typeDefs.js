@@ -40,6 +40,8 @@ const typeDefs = gql`
     #set the required fields for new applicant
     addApplicant(name: String!, email: String!, status: String!): Applicant
     addSchedule(date: String!): Schedule
+    addEmployee(name: String!, title: String!) : Employee
+    addPost(name: String!): Post
   }
 `;
 
