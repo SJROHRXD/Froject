@@ -25,6 +25,9 @@ const resolvers = {
   Mutation: {
     addApplicant: async (parent, {name, email, status}) => {
       return await Applicant.create({name, email, status});
+    }, 
+    addSchedule: async (parent, {date}) => {
+      return await Schedule.create({date});
     }
   }
 }; 

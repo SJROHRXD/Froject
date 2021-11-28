@@ -39,6 +39,7 @@ const typeDefs = gql`
   type Mutation {
     #set the required fields for new applicant
     addApplicant(name: String!, email: String!, status: String!): Applicant
+    addSchedule(date: String!): Schedule
   }
 `;
 
