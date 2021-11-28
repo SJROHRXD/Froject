@@ -6,7 +6,8 @@ const resolvers = {
       return await Applicant.find({}).populate('posting').populate('schedule');
     },
     applicant: async (parent, args) => {
-      return await Applicant.findOne({email: args.email});
+    // returns the first found record that matches the regex email ignoring the case
+    return await Applicant.findOne({email:{'$regex' : args.email, '$options' : 'i'}});
     },
     employees: async () => {
       return await Employee.find({});
