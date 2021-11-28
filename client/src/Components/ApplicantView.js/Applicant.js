@@ -20,7 +20,7 @@ export const Applicant = () => {
             status: "Accepted",
             schedule: "03.15.21",
             feedback: "Man, this kid whines a lot. 'Boo hoo this, boo who that.' Some serious daddy issues too.",
-            email: "lightsabergoesbrr@spacereligion.com",
+            email: "lightsabergoesbrr@kookyspacereligion.com",
             id: '2',
 
         },
@@ -97,13 +97,13 @@ export const Applicant = () => {
                   </figure>
                 </div>
                 <div className="media-content">
-                  <p className="is-size-3">John Smith</p>
-                  <p className="is-size-5">Junior Back-End Dev</p>
-                  <p className="is-size-6">johnsmith@johnnyboy.com</p>
+                  <p className="is-size-3">{data[1].name}</p>
+                  <p className="is-size-5">{data[1].posting}</p>
+                  <p className="is-size-6">{data[1].email}</p>
                 </div>
                 <div className="column">
-                  <div className="column">Status: Rejected</div>
-                  <div className="column">Interview Date: 04.20.21</div>
+                  <div className="column">Status: {data[1].status}</div>
+                  <div className="column">Interview Date: {data[1].schedule}</div>
                 </div>
               </div>
             </div>
@@ -123,15 +123,7 @@ export const Applicant = () => {
                 <p>Comments</p>
               </div>
               <div className="message-body has-text-black">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,
-                numquam temporibus eos id magni atque odit eveniet, quia amet,
-                fugiat doloremque culpa quo dolorem cum nihil dicta reprehenderit
-                rem? Quae ut odit eaque, expedita velit aperiam omnis corporis eum,
-                nihil voluptate magnam deserunt repudiandae adipisci sequi tempora
-                dolor repellendus mollitia excepturi possimus, placeat accusamus
-                libero nisi vero harum! Odit fugiat laborum enim? Obcaecati veniam
-                exercitationem iste perferendis dolore cum quae hic, fuga sint odit
-                vel ipsam doloribus facere beatae corrupti?
+                {data[1].feedback}
               </div>
             </article>
           </div>
