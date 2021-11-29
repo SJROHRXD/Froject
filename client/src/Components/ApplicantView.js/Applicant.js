@@ -1,50 +1,22 @@
 import React from 'react'
 import { Applicants } from './Applicants'
+import { useQuery } from '@apollo/client';
+import { QUERY_APPLICANTS } from '../../utils/queries';
+
+
 
 export const Applicant = () => {
+   const { loading, data } = useQuery(QUERY_APPLICANTS);
+   const applicantsArray = data?.applicants || [];
+   if (!loading) {
+     console.log('finished loading');
+     console.log("raw data" + data);
+     const applicantsArray = data?.applicants || [];
+     console.log(applicantsArray.length);
+   }
 
-    const data = [
-        {
-            name: "Han Solo",
-            posting: "Smuggler",
-            status: "Pending",
-            schedule: "01.20.22",
-            feedback: "A bit cocky, but can get any task done we give him.",
-            email: "whats-a-parsec@jabbasplace.com",
-            id: '1',
+ 
 
-        },
-        {
-            name: "Luke Skywalker",
-            posting: "Jedi",
-            status: "Accepted",
-            schedule: "03.15.21",
-            feedback: "Man, this kid whines a lot. 'Boo hoo this, boo who that.' Some serious daddy issues too.",
-            email: "lightsabergoesbrr@kookyspacereligion.com",
-            id: '2',
-
-        },
-        {
-            name: "R2-D2",
-            posting: "Service Droid",
-            status: "Rejected",
-            schedule: "05.20.20",
-            feedback: "01100010 01100101 01100101 01110000 00100000 01100010 01101111 01101111 01110000",
-            email: "beep@boop.com",
-            id: '3',
-
-        },
-        {
-            name: "Lando Calrissian",
-            posting: "Smuggler",
-            status: "Accepted",
-            schedule: "04.20.21",
-            feedback: "What a guy!",
-            email: "cloudcity@bespin.gov",
-            id: '4',
-
-        },
-    ]
 
     return (
         <div className="columns is-fullheight-100vh m-5">
@@ -75,15 +47,22 @@ export const Applicant = () => {
             </div>
             
             <ul>
-              {/* Grabbing the applicant info and mapping through it */}
-              {data.map((applicant) => (
-                // Placcing each set of applicant info in its on list item component
-                  <Applicants
-                  name={applicant.name}
-                  posting={applicant.posting}
-                  key={applicant.id}
-                  />
-              ))}
+              {
+               
+                  applicantsArray.map(
+                       (applicant) => (
+                         // Placcing each set of applicant info in its on list item component
+                         <Applicants
+                           name={applicant.name}
+                           email={applicant.email}
+                           key={applicant.email}
+                         />
+                       )
+                     )
+                  
+              }
+                
+                
             </ul>
         
           </div>
@@ -97,13 +76,13 @@ export const Applicant = () => {
                   </figure>
                 </div>
                 <div className="media-content">
-                  <p className="is-size-3">{data[1].name}</p>
-                  <p className="is-size-5">{data[1].posting}</p>
-                  <p className="is-size-6">{data[1].email}</p>
+                  {/* <p className="is-size-3">{applicantsArray[1].name}</p> */}
+                  {/* <p className="is-size-5">{applicantsArray[1].posting}</p> */}
+                  {/* <p className="is-size-6">{applicantsArray[1].email}</p> */}
                 </div>
                 <div className="column">
-                  <div className="column">Status: {data[1].status}</div>
-                  <div className="column">Interview Date: {data[1].schedule}</div>
+                  {/* <div className="column">Status: {applicantsArray[1].status}</div>
+                  <div className="column">Interview Date: {applicantsArray[1].schedule}</div> */}
                 </div>
               </div>
             </div>
@@ -123,7 +102,7 @@ export const Applicant = () => {
                 <p>Comments</p>
               </div>
               <div className="message-body has-text-black">
-                {data[1].feedback}
+                {/* {data[1].feedback} */}
               </div>
             </article>
           </div>

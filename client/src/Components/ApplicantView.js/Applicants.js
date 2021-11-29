@@ -7,7 +7,7 @@ export const Applicants = (applicant) => {
         {applicant.name}
       </div>
       <div className='column' is='posting'>
-        {applicant.posting}
+        {applicant.email}
       </div>
     </div>
   );
