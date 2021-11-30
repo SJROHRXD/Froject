@@ -7,6 +7,9 @@ export const QUERY_APPLICANTS = gql`
       _id
       name
       email
+      posting {
+        name
+      }
     }
   }
 `;
