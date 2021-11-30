@@ -28,7 +28,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    applicants: [Applicant]
+    applicants: [Applicant]!
     employees: [Employee]
     posts: [Post]
     schedules: [Schedule]

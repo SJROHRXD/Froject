@@ -3,7 +3,7 @@ const { Applicant, Employee, Post, Schedule } = require('../models');
 const resolvers = {
   Query: {
     applicants: async () => {
-      return await Applicant.find({}).populate('posting').populate('schedule');
+      return Applicant.find().populate('posting').populate('schedule');
     },
     applicantByEmail: async (parent, args) => {
     // returns the first found record that matches the regex email ignoring the case

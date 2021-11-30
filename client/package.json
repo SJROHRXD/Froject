@@ -20,7 +20,9 @@
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.4.0",
     "uuid": "^8.3.2",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "graphql": "^15.4.0",
+    "@apollo/client": "^3.3.5"
   },
   "scripts": {
     "start": "react-scripts start",

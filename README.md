@@ -42,7 +42,19 @@ This is a project.
 
 ## Installation 🛠
 
-//
+From the root directory, run
+
+```
+npm install
+```
+
+This should run the install scripts in all directories (server, client, and root). Once the installation completes, to run locally, run
+
+```
+npm run develop
+```
+
+This should start the react front end as proxy as well as the graphql and backend server
 
 ## Seeding the Database
 
