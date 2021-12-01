@@ -9,6 +9,7 @@ import { Footer } from './Components/layout/Footer';
 // import { Router } from 'express';
 import { SignIn } from './Components/Landing/SignIn.js';
 import { Applicant } from './Components/ApplicantView.js/Applicant';
+import { Pricing } from './Components/Landing/Pricing';
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -24,6 +25,7 @@ function App() {
           <Routes>
             <Route exact path='/' element={SignIn()} />
             <Route exact path='/applicant' element={Applicant()} />
+            <Route exact path='/pricing' element={Pricing()} />
           </Routes>
           <Footer />
         </Fragment>

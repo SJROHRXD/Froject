@@ -2,7 +2,7 @@ import React from 'react';
 
 export const SignIn = () => {
   return (
-    <section className='section'>
+    <section className='section column-h-80'>
       <form>
         <div className='' id='svgLogo'>
           <svg
