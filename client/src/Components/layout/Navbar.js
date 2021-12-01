@@ -8,8 +8,13 @@ export const Navbar = () => {
           Zapplicant
         </a>
       </div>
+      <div className='navbar is-primary'>
+        <a href='/applicant' className='navbar-item has-text-light'>
+          Applicants
+        </a>
+      </div>
       <div className='navbar-end'>
-        <a href='www.google.com' className='navbar-item'>
+        <a href='#' className='navbar-item'>
           Settings<i className='ml-2 fa fa-cog'></i>
         </a>
       </div>
