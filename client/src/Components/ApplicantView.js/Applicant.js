@@ -7,6 +7,12 @@ export const Applicant = () => {
   const { data } = useQuery(QUERY_APPLICANTS);
   const applicantsArray = data?.applicants || [];
 
+  const handleParentOnClick = (event) => {
+    console.log(
+      "parent detected a click! wholy fuck it worked####### " + event
+    );
+  };
+
   return (
     <div className="columns is-fullheight-100vh m-5">
       <div className="column card mr-5">
@@ -37,7 +43,9 @@ export const Applicant = () => {
         <ul>
           {applicantsArray.map((applicant) => (
             // Placcing each set of applicant info in its on list item component
+
             <Applicants
+              onClick={(event) => handleParentOnClick(event)}
               name={applicant.name}
               email={applicant.email}
               posting={applicant.posting?.name || ""}
@@ -56,7 +64,9 @@ export const Applicant = () => {
               </figure>
             </div>
             <div className="media-content">
-              <p className="is-size-3">{applicantsArray[1]?.name}</p>
+              <p className="is-size-3" onClick={() => handleParentOnClick()}>
+                {applicantsArray[1]?.name}
+              </p>
               <p className="is-size-5">{applicantsArray[1]?.posting?.name}</p>
               <p className="is-size-6">{applicantsArray[1]?.email}</p>
             </div>
