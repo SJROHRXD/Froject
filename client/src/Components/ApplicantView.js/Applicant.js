@@ -37,7 +37,6 @@ export const Applicant = () => {
         <ul>
           {applicantsArray.map((applicant) => (
             // Placcing each set of applicant info in its on list item component
-
             <Applicants
               name={applicant.name}
               email={applicant.email}
@@ -57,13 +56,15 @@ export const Applicant = () => {
               </figure>
             </div>
             <div className="media-content">
-              {/* <p className="is-size-3">{applicantsArray[1].name}</p>
-              <p className="is-size-5">{applicantsArray[1].posting}</p>
-              <p className="is-size-6">{applicantsArray[1].email}</p> */}
+              <p className="is-size-3">{applicantsArray[1]?.name}</p>
+              <p className="is-size-5">{applicantsArray[1]?.posting?.name}</p>
+              <p className="is-size-6">{applicantsArray[1]?.email}</p>
             </div>
             <div className="column">
-              {/* <div className="column">Status: {applicantsArray[1].status}</div>
-                  <div className="column">Interview Date: {applicantsArray[1].schedule}</div> */}
+              <div className="column">Status: {applicantsArray[1]?.status}</div>
+              <div className="column">
+                Interview Date: {applicantsArray[1]?.schedule?.date}
+              </div>
             </div>
           </div>
         </div>
@@ -85,7 +86,7 @@ export const Applicant = () => {
             <p>Comments</p>
           </div>
           <div className="message-body has-text-black">
-            {/* {data[1].feedback} */}
+            {applicantsArray[1]?.feedback}
           </div>
         </article>
       </div>

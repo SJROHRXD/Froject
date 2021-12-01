@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const QUERY_APPLICANTS = gql`
   # create a GraphQL query to be executed by Apollo Client
@@ -10,6 +10,10 @@ export const QUERY_APPLICANTS = gql`
       posting {
         name
       }
+      schedule {
+        date
+      }
+      feedback
     }
   }
 `;
