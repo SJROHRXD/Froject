@@ -42,3 +42,11 @@ label {
     fill: #01ABAA;
     transition: fill .5s ease-in-out;
 }
+
+.column-h-90 {
+    height: 90vh;
+}
+
+.column-h-80 {
+    height: 80vh;
+}
