@@ -1,17 +1,31 @@
 import React from "react";
+import { useState } from "react";
 import { Applicants } from "./Applicants";
 import { useQuery } from "@apollo/client";
-import { QUERY_APPLICANTS } from "../../utils/queries";
+import {
+  QUERY_APPLICANTS,
+  QUERY_APPLICANTS_BY_EMAIL,
+} from "../../utils/queries";
 
 export const Applicant = () => {
   const { data } = useQuery(QUERY_APPLICANTS);
+
+  const [selectedApplicant, setSelectedApplicant] = useState("");
+
   const applicantsArray = data?.applicants || [];
 
-  const handleParentOnClick = (event) => {
-    console.log(
-      "parent detected a click! wholy fuck it worked####### " + event
-    );
-  };
+  const { loading, data: currentApplicant } = useQuery(
+    QUERY_APPLICANTS_BY_EMAIL,
+    {
+      variables: { email: selectedApplicant },
+    }
+  );
+
+  if (loading) {
+    console.log("loading");
+  } else {
+    console.log("finished loading.." + currentApplicant.applicantByEmail.name);
+  }
 
   return (
     <div className="columns is-fullheight-100vh m-5">
@@ -45,7 +59,13 @@ export const Applicant = () => {
             // Placcing each set of applicant info in its on list item component
 
             <Applicants
-              onClick={(event) => handleParentOnClick(event)}
+              onClick={(event) => {
+                setSelectedApplicant(event);
+                console.log("selectedApplicant: " + selectedApplicant);
+                console.log(
+                  "current applicant " + currentApplicant?.applicantByEmail.name
+                );
+              }}
               name={applicant.name}
               email={applicant.email}
               posting={applicant.posting?.name || ""}
@@ -63,17 +83,23 @@ export const Applicant = () => {
                 <img src="./blank-profile-picture-973460_640.png" alt="" />
               </figure>
             </div>
+
             <div className="media-content">
-              <p className="is-size-3" onClick={() => handleParentOnClick()}>
-                {applicantsArray[1]?.name}
+              <p className="is-size-3">
+                {currentApplicant?.applicantByEmail?.name}
               </p>
-              <p className="is-size-5">{applicantsArray[1]?.posting?.name}</p>
-              <p className="is-size-6">{applicantsArray[1]?.email}</p>
+              <p className="is-size-5">
+                {currentApplicant?.applicantByEmail?.posting?.name}
+              </p>
+              <p className="is-size-6">{selectedApplicant}</p>
             </div>
             <div className="column">
-              <div className="column">Status: {applicantsArray[1]?.status}</div>
               <div className="column">
-                Interview Date: {applicantsArray[1]?.schedule?.date}
+                Status: {currentApplicant?.applicantByEmail?.status}
+              </div>
+              <div className="column">
+                Interview Date:{" "}
+                {currentApplicant?.applicantByEmail?.schedule?.date}
               </div>
             </div>
           </div>
@@ -96,7 +122,7 @@ export const Applicant = () => {
             <p>Comments</p>
           </div>
           <div className="message-body has-text-black">
-            {applicantsArray[1]?.feedback}
+            {currentApplicant?.applicantByEmail?.feedback}
           </div>
         </article>
       </div>

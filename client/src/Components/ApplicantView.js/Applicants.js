@@ -6,7 +6,7 @@ export const Applicants = (applicant) => {
       <div
         className="column is-half ml-3"
         id="name"
-        onClick={(e) => applicant.onClick(applicant.email, e)}
+        onClick={(e) => applicant.onClick(applicant.email)}
       >
         {applicant.name}
       </div>
