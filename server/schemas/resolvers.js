@@ -43,6 +43,15 @@ const resolvers = {
     addPost: async (parent, { name }) => {
       return await Post.create({ name });
     },
+    addFeedback: async (parent, { email, feedback }) => {
+      return await Applicant.findOneAndUpdate({ email: email }, { feedback });
+      // return Applicant.findOneAndUpdate(
+      //   { email: email },
+      //   {
+      //     $addToSet: { feedback: feedback },
+      //   }
+      // );
+    },
   },
 };
 

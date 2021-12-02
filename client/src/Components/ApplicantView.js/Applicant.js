@@ -1,16 +1,20 @@
 import React from "react";
 import { useState } from "react";
 import { Applicants } from "./Applicants";
-import { useQuery } from "@apollo/client";
+import { useMutation, useQuery } from "@apollo/client";
 import {
   QUERY_APPLICANTS,
   QUERY_APPLICANTS_BY_EMAIL,
 } from "../../utils/queries";
+import { ADD_FEEDBACK } from "../../utils/mutations";
 
 export const Applicant = () => {
   const { data } = useQuery(QUERY_APPLICANTS);
 
   const [selectedApplicant, setSelectedApplicant] = useState("");
+  const [addFeedback, { error }] = useMutation(ADD_FEEDBACK);
+
+  const [feedbackText, setFeedbackText] = useState("");
 
   const applicantsArray = data?.applicants || [];
 
@@ -21,11 +25,33 @@ export const Applicant = () => {
     }
   );
 
+  const handleSubmitButton = async () => {
+    console.log(feedbackText);
+    console.log(currentApplicant.applicantByEmail.email);
+    try {
+      const { data: x } = addFeedback({
+        variables: {
+          email: currentApplicant.applicantByEmail.email,
+          feedbackText: feedbackText,
+        },
+      });
+      window.location.reload();
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   if (loading) {
     console.log("loading");
   } else {
     console.log("finished loading.." + currentApplicant.applicantByEmail.name);
   }
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFeedbackText(value);
+    console.log(`name ${name} value ${value}`);
+  };
 
   return (
     <div className="columns is-fullheight-100vh m-5 column-h-90">
@@ -105,7 +131,6 @@ export const Applicant = () => {
                 Interview Date:{" "}
                 {currentApplicant?.applicantByEmail?.schedule?.date}
               </div>
-
             </div>
           </div>
           <div className="mt-3 message is-primary">
@@ -114,7 +139,6 @@ export const Applicant = () => {
             </div>
             <div className="card-content has-text-centered">
               <ul className="skills-list">
-
                 <li className="column">
                   {currentApplicant?.applicantByEmail?.skills[0]}
                 </li>
@@ -127,7 +151,6 @@ export const Applicant = () => {
                 <li className="column">
                   {currentApplicant?.applicantByEmail?.skills[3]}
                 </li>
-
               </ul>
             </div>
           </div>
@@ -142,12 +165,22 @@ export const Applicant = () => {
           <div class="field">
             <label class="label">Add Feedback</label>
             <div class="control">
-              <textarea class="textarea" placeholder="Textarea"></textarea>
+              <textarea
+                class="textarea"
+                placeholder="Candidate Feedback"
+                name="feedbackText"
+                onChange={handleChange}
+              ></textarea>
             </div>
           </div>
           <div class="field is-grouped">
             <div class="control">
-              <button class="button is-info">Submit</button>
+              <button
+                class="button is-info"
+                onClick={() => handleSubmitButton()}
+              >
+                Submit
+              </button>
             </div>
             <div class="control">
               <button class="button is-danger is-light">Cancel</button>
