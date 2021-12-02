@@ -1,4 +1,4 @@
-const { gql } = require('apollo-server-express');
+const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
   type Applicant {
@@ -9,6 +9,7 @@ const typeDefs = gql`
     email: String
     posting: Post
     schedule: Schedule
+    skills: [String]
   }
 
   type Employee {
@@ -23,7 +24,7 @@ const typeDefs = gql`
   }
 
   type Schedule {
-    _id: ID 
+    _id: ID
     date: String
   }
 
@@ -40,7 +41,7 @@ const typeDefs = gql`
     #set the required fields for new applicant
     addApplicant(name: String!, email: String!, status: String!): Applicant
     addSchedule(date: String!): Schedule
-    addEmployee(name: String!, title: String!) : Employee
+    addEmployee(name: String!, title: String!): Employee
     addPost(name: String!): Post
   }
 `;
