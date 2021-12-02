@@ -105,6 +105,7 @@ export const Applicant = () => {
                 Interview Date:{" "}
                 {currentApplicant?.applicantByEmail?.schedule?.date}
               </div>
+
             </div>
           </div>
           <div className="mt-3 message is-primary">
@@ -113,6 +114,7 @@ export const Applicant = () => {
             </div>
             <div className="card-content has-text-centered">
               <ul className="skills-list">
+
                 <li className="column">
                   {currentApplicant?.applicantByEmail?.skills[0]}
                 </li>
@@ -125,6 +127,7 @@ export const Applicant = () => {
                 <li className="column">
                   {currentApplicant?.applicantByEmail?.skills[3]}
                 </li>
+
               </ul>
             </div>
           </div>
