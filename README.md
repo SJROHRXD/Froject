@@ -1,5 +1,9 @@
 # Zapplicant ⚡⚡
 
+Presentation Link ✨
+
+[Zapplicant Slide Show](https://www.canva.com/design/DAEwhPw2v-g/lPrDiK2yWvYA3Z22GW-dwQ/view?utm_content=DAEwhPw2v-g&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
+
 ## Repository 💼
 
 [Zapplicant Repo](https://github.com/SJROHRXD/Froject)
