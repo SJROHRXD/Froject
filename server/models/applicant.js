@@ -6,33 +6,37 @@ const ApplicantSchema = new Schema({
   name: {
     type: String,
     required: true,
-    trim: true
+    trim: true,
   },
   posting: {
     type: Schema.Types.ObjectId,
-    ref: 'Post'
-  }, 
+    ref: "Post",
+  },
   // status can be inprogress, rejected, offer
   status: {
     type: String,
-    required: true, 
-    trim: true
+    required: true,
+    trim: true,
   },
   schedule: {
     type: Schema.Types.ObjectId,
-    ref: 'Schedule',
+    ref: "Schedule",
   },
   // since we are only considering an applicant for one job, we can have the feedback added here
   feedback: {
-    type: String, 
+    type: String,
     trim: true,
   },
-  // todo add email validation 
+  // todo add email validation
   email: {
-    type: String, 
-    required: true, 
+    type: String,
+    required: true,
     trim: true,
-  }
+  },
+  skills: {
+    type: [String],
+    trim: true,
+  },
 });
 
 const Applicant = mongoose.model("Applicant", ApplicantSchema);

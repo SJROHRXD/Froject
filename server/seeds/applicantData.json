@@ -3,30 +3,35 @@
     "name":"Arya Stark",
     "status": "Scheduled", 
     "feedback": "", 
-    "email": "arya.stark@noface.com"
+    "email": "arya.stark@noface.com", 
+    "skills": ["Kinves", "Swords", "Faces", "Pies"]
   },
   {
     "name":"Ned Stark",
     "status": "Rejected", 
     "feedback": "Too honest to be king", 
-    "email": "ned.stark@winterfell.com"
+    "email": "ned.stark@winterfell.com",
+    "skills": ["Swords", "Dying", "Handing", "Loyal"]
   },
   {
     "name":"Rob Stark",
     "status": "In Progress", 
     "feedback": "Young wolf.. may have  a bright future", 
-    "email": "rob.stark@winterfell.com"
+    "email": "rob.stark@winterfell.com",
+    "skills": ["War", "Weddings", "Dying", "Losing"]
   },
   {
     "name":"Jon Snow",
     "status": "Scheduled", 
     "feedback": "", 
-    "email": "jon.snow@castlebalck.com"
+    "email": "jon.snow@castlebalck.com",
+    "skills": ["Ygritte", "Steward", "Balck", "Wall"]
   },
   {
     "name":"Bran Stark",
     "status": "Offer Extended", 
     "feedback": "Long live Bran the crippled", 
-    "email": "bran.stark@sevenkingdoms.com"
+    "email": "bran.stark@sevenkingdoms.com",
+    "skills": ["Hodor", "Past", "Future", "King"]
   }
 ]

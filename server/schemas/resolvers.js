@@ -2,17 +2,26 @@ const { AuthenticationError } = require('apollo-server-express');
 const { Applicant, Employee, Post, Schedule } = require('../models');
 const { signToken } = require('../utils/auth');
 
+
 const resolvers = {
   Query: {
     applicants: async () => {
-      return Applicant.find().populate('posting').populate('schedule');
+      return Applicant.find().populate("posting").populate("schedule");
     },
     applicantByEmail: async (parent, args) => {
-    // returns the first found record that matches the regex email ignoring the case
-    return await Applicant.findOne({email:{'$regex' : args.email, '$options' : 'i'}}).populate('posting').populate('schedule');
+      // returns the first found record that matches the regex email ignoring the case
+      return await Applicant.findOne({
+        email: { $regex: args.email, $options: "i" },
+      })
+        .populate("posting")
+        .populate("schedule");
     },
     applicantByName: async (parent, args) => {
-      return await Applicant.findOne({name:{'$regex' : args.name, '$options' : 'i'}}).populate('posting').populate('schedule');
+      return await Applicant.findOne({
+        name: { $regex: args.name, $options: "i" },
+      })
+        .populate("posting")
+        .populate("schedule");
     },
     employees: async () => {
       return await Employee.find({});
@@ -22,10 +31,10 @@ const resolvers = {
     }, 
     posts: async () => {
       return await Post.find({});
-    }, 
+    },
     schedules: async () => {
       return await Schedule.find({});
-    }
+    },
   },
   Mutation: {
     addApplicant: async (parent, {name, email, status}) => {
@@ -53,10 +62,14 @@ const resolvers = {
       const token = signToken(employee);
       return { token, employee };
     }, 
-    addPost: async (parent, {name}) => {
-      return await Post.create({name});
-    }
-  }
-}; 
+
+    addPost: async (parent, { name }) => {
+      return await Post.create({ name });
+    },
+    addFeedback: async (parent, { email, feedback }) => {
+      return await Applicant.findOneAndUpdate({ email: email }, { feedback });
+    },
+  },
+};
 
 module.exports = resolvers;

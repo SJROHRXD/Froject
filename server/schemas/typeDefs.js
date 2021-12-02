@@ -1,4 +1,4 @@
-const { gql } = require('apollo-server-express');
+const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
   type Applicant {
@@ -9,6 +9,7 @@ const typeDefs = gql`
     email: String
     posting: Post
     schedule: Schedule
+    skills: [String]
   }
 
   type Employee {
@@ -30,7 +31,7 @@ const typeDefs = gql`
   }
 
   type Schedule {
-    _id: ID 
+    _id: ID
     date: String
   }
 
@@ -48,10 +49,11 @@ const typeDefs = gql`
     #set the required fields for new applicant
     addApplicant(name: String!, email: String!, status: String!): Applicant
     addSchedule(date: String!): Schedule
-    addPost(name: String!): Post
     # Set up mutations to handle creating a profile or logging into a profile and return Auth type
     addEmployee(name: String!, title: String!, password: String!): Auth
     login(password: String!): Auth
+    addPost(name: String!): Post
+    addFeedback(email: String!, feedback: String): Applicant
   }
 `;
 

@@ -1,24 +1,16 @@
 # Zapplicant ⚡⚡
 
-This is a project.
+Presentation Link ✨
+
+[Zapplicant Slide Show](https://www.canva.com/design/DAEwhPw2v-g/lPrDiK2yWvYA3Z22GW-dwQ/view?utm_content=DAEwhPw2v-g&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
 
 ## Repository 💼
 
-[]()
-
-## Video Demo 💼
-
-[]()
-
-## Screenshots 💼
-
-<img src="https://raw">
+[Zapplicant Repo](https://github.com/SJROHRXD/Froject)
 
 ## Table of Contents
 
 - [Repository](#Repository-)
-- [Video Demo](#Video-Demo-)
-- [Screenshots](#Screenshots-)
 - [Description](#Description-)
 - [Installation](#Installation-)
 - [Usage](#Usage-)
@@ -30,7 +22,9 @@ This is a project.
 
 ## Description 📌
 
-//
+Zapplicant is a web application designed for hiring managers and HR professionals with the aim of managing job applicants in a visually intuitive manner.
+
+It allows the user to enter, modify, filter and rate potential employees based on the results of their interviews.
 
 ### Overview 🤞
 
@@ -81,22 +75,18 @@ The output should give you a link to the GraphQL Server. It will will look like
 http://localhost:5000/graphql
 ```
 
-Clicking the link, will open the GraphQL web page where you can view the schema and run desired queries.
+Clicking the link will open the GraphQL web page where you can view the schema and run desired queries.
 It is recommended that you seed the DB before you execute this step.
 
-//
+[GraphQL](https://graphql.org/)
 
 ## Tech 🖥
 
-                React, Redux
-
-## Testing 🧷
-
-//
+        React, Redux, BCrupt, Express, MongoDB, Axios, etc
 
 ## Contribution 🤝
 
-//
+View contact information to contribute or submit feedback!
 
 ## Licensing 🧾
 
@@ -107,12 +97,11 @@ Copyright &copy; 2021
 ## Contact 🗨
 
 [Elliott's GitHub](https://github.com/spencee1315)
+
 [Ray's GitHub](https://github.com/rashir01)
+
 [Zakk's GitHub](https://github.com/ZakkFast)
+
 [Sarah's GitHub](https://github.com/SJROHRXD)
 
 This README was generated with ⚡💼 and 🤍 by Sarah, Zakk, Elliott and Ray.
-
-```
-
-```
