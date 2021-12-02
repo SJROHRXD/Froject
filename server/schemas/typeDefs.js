@@ -43,6 +43,7 @@ const typeDefs = gql`
     addSchedule(date: String!): Schedule
     addEmployee(name: String!, title: String!): Employee
     addPost(name: String!): Post
+    addFeedback(email: String!, feedback: String): Applicant
   }
 `;
 
