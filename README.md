@@ -82,7 +82,7 @@ It is recommended that you seed the DB before you execute this step.
 
 ## Tech 🖥
 
-        React, Redux, BCrupt, Express, MongoDB, Axios, etc
+        React, BCrupt, Express, MongoDB, Axios, etc
 
 ## Contribution 🤝
 
