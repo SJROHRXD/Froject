@@ -140,7 +140,10 @@ export const Applicant = () => {
           <div class="field">
             <label class="label">Add Feedback</label>
             <div class="control">
-              <textarea class="textarea" placeholder="Textarea"></textarea>
+              <textarea
+                class="textarea"
+                placeholder="Candidate Feedback"
+              ></textarea>
             </div>
           </div>
           <div class="field is-grouped">
