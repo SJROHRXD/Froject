@@ -1,4 +1,7 @@
-const { Applicant, Employee, Post, Schedule } = require("../models");
+const { AuthenticationError } = require('apollo-server-express');
+const { Applicant, Employee, Post, Schedule } = require('../models');
+const { signToken } = require('../utils/auth');
+
 
 const resolvers = {
   Query: {
@@ -23,6 +26,9 @@ const resolvers = {
     employees: async () => {
       return await Employee.find({});
     },
+    employee: async (parent, {employeeId}) => {
+      return Employee.findOne({ _id: employeeId });
+    }, 
     posts: async () => {
       return await Post.find({});
     },
@@ -31,26 +37,37 @@ const resolvers = {
     },
   },
   Mutation: {
-    addApplicant: async (parent, { name, email, status }) => {
-      return await Applicant.create({ name, email, status });
+    addApplicant: async (parent, {name, email, status}) => {
+      return await Applicant.create({name, email, status});
+    }, 
+    addSchedule: async (parent, {date}) => {
+      return await Schedule.create({date});
+    }, 
+    addEmployee: async (parent, {name, title, password}) => {
+      return await Employee.create({name, title, password});
     },
-    addSchedule: async (parent, { date }) => {
-      return await Schedule.create({ date });
-    },
-    addEmployee: async (parent, { name, title }) => {
-      return await Employee.create({ name, title });
-    },
+    login: async (parent, { name, password }) => {
+      const employee = await Employee.findOne({ name });
+
+      if (!employee) {
+        throw new AuthenticationError('No employee with this password found!');
+      }
+
+      const correctPw = await employee.isCorrectPassword(password);
+
+      if (!correctPw) {
+        throw new AuthenticationError('Incorrect password!');
+      }
+
+      const token = signToken(employee);
+      return { token, employee };
+    }, 
+
     addPost: async (parent, { name }) => {
       return await Post.create({ name });
     },
     addFeedback: async (parent, { email, feedback }) => {
       return await Applicant.findOneAndUpdate({ email: email }, { feedback });
-      // return Applicant.findOneAndUpdate(
-      //   { email: email },
-      //   {
-      //     $addToSet: { feedback: feedback },
-      //   }
-      // );
     },
   },
 };

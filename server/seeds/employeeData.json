@@ -1,22 +1,27 @@
 [
   {
     "name": "Ray Ashir", 
-    "title": "Backend Developer"
+    "title": "Backend Developer",
+    "password": "test123"
   }, 
   {
-    "name": "Elliot Spencer", 
-    "title": "Backend Developer"
+    "name": "Elliott Spencer", 
+    "title": "Backend Developer",
+    "password": "test123"
   }, 
   {
     "name": "Zakk Fast", 
-    "title": "Full Stack Developer"
+    "title": "Full Stack Developer",
+    "password": "test123"
   }, 
   {
     "name": "Sarah Rohr", 
-    "title": "Front End Developer"
+    "title": "Front End Developer",
+    "password": "test123"
   },
   {
     "name": "Peter S", 
-    "title": "Recruiter"
+    "title": "Recruiter",
+    "password": "test123"
   }
 ]
