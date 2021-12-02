@@ -15,6 +15,13 @@ const typeDefs = gql`
     _id: ID
     name: String
     title: String
+    # There is now a field to store the user's password
+    password: String
+  }
+
+  type Auth {
+    token: ID!
+    employee: Employee
   }
 
   type Post {
@@ -28,8 +35,9 @@ const typeDefs = gql`
   }
 
   type Query {
+    employees: [Employee]!
+    employee(employeeId: ID!): Employee
     applicants: [Applicant]!
-    employees: [Employee]
     posts: [Post]
     schedules: [Schedule]
     applicantByEmail(email: String!): Applicant
@@ -40,8 +48,10 @@ const typeDefs = gql`
     #set the required fields for new applicant
     addApplicant(name: String!, email: String!, status: String!): Applicant
     addSchedule(date: String!): Schedule
-    addEmployee(name: String!, title: String!) : Employee
     addPost(name: String!): Post
+    # Set up mutations to handle creating a profile or logging into a profile and return Auth type
+    addEmployee(name: String!, title: String!, password: String!): Auth
+    login(password: String!): Auth
   }
 `;
 
