@@ -63,7 +63,11 @@ export const Applicant = () => {
                 setSelectedApplicant(event);
                 console.log("selectedApplicant: " + selectedApplicant);
                 console.log(
-                  "current applicant " + currentApplicant?.applicantByEmail.name
+                  "skills" + currentApplicant?.applicantByEmail?.skills
+                );
+                console.log(
+                  "current applicant " +
+                    currentApplicant?.applicantByEmail?.name
                 );
               }}
               name={applicant.name}
@@ -102,15 +106,6 @@ export const Applicant = () => {
                 {currentApplicant?.applicantByEmail?.schedule?.date}
               </div>
 
-              <div className="media-content">
-                {/* <p className="is-size-3">{applicantsArray[1].name}</p>
-              <p className="is-size-5">{applicantsArray[1].posting}</p>
-              <p className="is-size-6">{applicantsArray[1].email}</p> */}
-              </div>
-              <div className="column">
-                {/* <div className="column">Status: {applicantsArray[1].status}</div>
-                  <div className="column">Interview Date: {applicantsArray[1].schedule}</div> */}
-              </div>
             </div>
           </div>
           <div className="mt-3 message is-primary">
@@ -119,10 +114,20 @@ export const Applicant = () => {
             </div>
             <div className="card-content has-text-centered">
               <ul className="skills-list">
-                <li className="column">JavaScript</li>
-                <li className="column">React</li>
-                <li className="column">PHP</li>
-                <li className="column">Express</li>
+
+                <li className="column">
+                  {currentApplicant?.applicantByEmail?.skills[0]}
+                </li>
+                <li className="column">
+                  {currentApplicant?.applicantByEmail?.skills[1]}
+                </li>
+                <li className="column">
+                  {currentApplicant?.applicantByEmail?.skills[2]}
+                </li>
+                <li className="column">
+                  {currentApplicant?.applicantByEmail?.skills[3]}
+                </li>
+
               </ul>
             </div>
           </div>
@@ -132,9 +137,6 @@ export const Applicant = () => {
             </div>
             <div className="message-body has-text-black">
               {currentApplicant?.applicantByEmail?.feedback}
-            </div>
-            <div className="message-body has-text-black">
-              {/* {data[1].feedback} */}
             </div>
           </article>
           <div class="field">

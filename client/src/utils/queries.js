@@ -14,6 +14,7 @@ export const QUERY_APPLICANTS = gql`
         date
       }
       feedback
+      skills
     }
   }
 `;
@@ -30,6 +31,7 @@ export const QUERY_APPLICANTS_BY_EMAIL = gql`
       schedule {
         date
       }
+      skills
       feedback
     }
   }
