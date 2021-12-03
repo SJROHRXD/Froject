@@ -1,8 +1,13 @@
 import React, { useState } from "react";
+import { LOGIN_EMPLOYEE } from "../../utils/mutations";
+import Auth from "../../utils/auth";
+import { useMutation } from "@apollo/client";
 
 export const SignIn = () => {
   const [companyName, setCompnayName] = useState("");
   const [password, setPassword] = useState("");
+
+  const [login, { error, data }] = useMutation(LOGIN_EMPLOYEE);
 
   const handleComapanyChange = (event) => {
     const { value } = event.target;
@@ -13,8 +18,20 @@ export const SignIn = () => {
     setPassword(value);
   };
 
-  const handleLoginSubmit = (event) => {
+  const handleLoginSubmit = async (event) => {
     event.preventDefault();
+    try {
+      console.log(
+        "sending this to login: company" + companyName + " pw " + password
+      );
+      const { data } = await login({
+        variables: { name: "Ray Ashir", password: "test123" },
+      });
+      console.log(data.login.token);
+      Auth.login(data.login.token);
+    } catch (e) {
+      console.error(e);
+    }
 
     console.log("company name " + companyName);
     console.log("password " + password);
