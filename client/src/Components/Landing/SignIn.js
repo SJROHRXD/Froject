@@ -25,7 +25,7 @@ export const SignIn = () => {
         "sending this to login: company" + companyName + " pw " + password
       );
       const { data } = await login({
-        variables: { name: "Ray Ashir", password: "test123" },
+        variables: { name: companyName, password: password },
       });
       console.log(data.login.token);
       Auth.login(data.login.token);
