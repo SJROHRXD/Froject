@@ -109,9 +109,7 @@ export const SignIn = () => {
             Login
           </button>
 
-          <button className="button" type="">
-            View Membership Prices
-          </button>
+          <a href="/pricing" className="button is-warning">Pricing</a>
         </div>
       </form>
     </section>
