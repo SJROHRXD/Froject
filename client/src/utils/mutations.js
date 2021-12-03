@@ -17,3 +17,15 @@ export const ADD_FEEDBACK = gql`
     }
   }
 `;
+
+export const LOGIN_EMPLOYEE = gql`
+  mutation login($name: String!, $password: String!) {
+    login(name: $name, password: $password) {
+      token
+      employee {
+        _id
+        name
+      }
+    }
+  }
+`;
