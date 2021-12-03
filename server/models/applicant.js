@@ -27,11 +27,11 @@ const ApplicantSchema = new Schema({
     type: String,
     trim: true,
   },
-  // todo add email validation
   email: {
     type: String,
     required: true,
     trim: true,
+    match: [/.+@.+\..+/, "Must match an email address!"],
   },
   skills: {
     type: [String],

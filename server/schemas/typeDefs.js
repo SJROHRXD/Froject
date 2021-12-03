@@ -17,7 +17,7 @@ const typeDefs = gql`
     name: String
     title: String
     # There is now a field to store the user's password
-    password: String
+    password: String!
   }
 
   type Auth {
@@ -51,7 +51,7 @@ const typeDefs = gql`
     addSchedule(date: String!): Schedule
     # Set up mutations to handle creating a profile or logging into a profile and return Auth type
     addEmployee(name: String!, title: String!, password: String!): Auth
-    login(password: String!): Auth
+    login(name: String, password: String!): Auth
     addPost(name: String!): Post
     addFeedback(email: String!, feedback: String): Applicant
   }
