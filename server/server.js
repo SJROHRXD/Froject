@@ -19,12 +19,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 server.applyMiddleware({ app });
 
-// routes
-// app.get("/", (req, res) => res.send("API Running"));
-// app.get("/schedule", (req, res) => res.send("API Running"));
-// app.get("/comment", (req, res) => res.send("API Running"));
-// TODO: add more routes as we need them here
-
 // if we're in production, define the folder that will be used for static assets
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")));
